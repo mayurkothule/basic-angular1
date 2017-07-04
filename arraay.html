@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="angular.min.js"></script>
+</head>
+<body ng-app ng-init="emps=[{empid:1001,ename:'Mithu',salary:30000},
+      {empid:1002,ename:'Mayur',salary:40000}]">
+
+    <ul ng-repeat="e in emps">
+        <li>Id: {{e.empid}}</li>
+        <li>Name: {{e.ename}}</li>
+        <li>Salary: {{e.salary}}</li>   
+    </ul>
+</body>
+</html>

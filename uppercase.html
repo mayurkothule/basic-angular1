@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="angular.min.js"></script>
+</head>
+<body ng-app ng-init="emps= ['Mithu','Mayur','Swapnil']">
+	
+    <ul ng-repeat="x in emps">
+
+        <li>{{x|uppercase}}</li>
+        
+    </ul>
+    <ul ng-repeat="x in emps">
+
+        <li>{{x|lowercase}}</li>
+
+    </ul>
+   
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="angular.min.js"></script>
+
+</head>
+<body ng-app="myApp" ng-controller="studentController">
+    <input type="text" ng-model="fname" /><br />
+    <input type="text" ng-model="lname" /><br />
+    {{fullName()}}
+    <script>
+        var myapp = angular.module('myApp', []);
+        myapp.controller('studentController', function ($scope) {
+
+            $scope.fname = "Mayur";
+            $scope.lname = "Kothule";
+            $scope.fullName = function () {
+            return $scope.fname + " " + $scope.lname;
+            };
+        });
+    </script>
+</body>
+</html>
+

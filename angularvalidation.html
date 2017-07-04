@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="angular.min.js"></script>
+    
+    <style>
+        
+        input.ng-invalid{
+            background-color:red
+        }
+
+        input.ng-valid{
+            background-color:green;
+        }
+
+        input.ng-pristine{
+            background-color:yellow;
+        }
+    </style>
+
+</head>
+<body ng-app>
+
+    <form name="f1">
+        Enter name : <input type="text" name="user" ng-model="user" required/>
+        <span style="color:red" ng-show="f1.user.$error.required" >
+            User required
+        </span>
+        <br />
+
+        Enter E-mail : <input type="email" name="email" ng-model="email" required />
+        <span style="color:red">
+            <span ng-show="f1.email.$pristine"> E-mail required </span>
+            <span ng-show="f1.email.$dirty && f1.email.$invalid"> Invalid e-mail ID</span>
+        </span>  <br/>
+        
+        touched : {{f1.email.$touched}}  <br/>
+        valid : {{f1.email.$valid}} <br/>
+        invalid : {{f1.email.$invalid}} <br/>
+        pristine : {{f1.email.$pristine}} <br/>
+
+        <br />
+    </form>
+
+</body>
+</html>

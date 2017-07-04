@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My Angular Project</title>
+    <script src="angular.min.js"></script>
+</head>
+
+<body ng-app ng-init="name='Mayur'" >
+
+    <input type="text" ng-model="name"/><br/>
+
+    <p>name:<span ng-bind="name"/></p>
+
+    <h1>Welcome <span ng-bind="name"/></h1>
+    <h1>How are you {{name}}</h1>
+
+
+
+</body>
+</html>
